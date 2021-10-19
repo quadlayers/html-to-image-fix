@@ -10,7 +10,11 @@ const Problem = () => {
 
         </div>
       </div>
+      <p>
+        Problem with the svg in a mask.
 
+        The image provided by html-to-image totally ignores the element with the rule css webkit-mask: url ()
+      </p>
       <button onClick={() => {
         let container = document.getElementById('problem');
         let node = document.getElementById('my-node');
