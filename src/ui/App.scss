@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+button {
+    display: block;
+}
+
+#my-node {
+    width: 500px;
+    height: 89px;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask: url(./logo.svg);
+    background: black;
+    display: inline-block;
+}
+
+#my-node-2 {
+    display: inline-block;
+}
+
+.my-node {
+    border: 2px solid black;
+    display: inline-block;
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+img {
+    display: block;
+}
