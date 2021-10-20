@@ -1,4 +1,3 @@
-/* ES6 */
 import * as htmlToImage from 'html-to-image';
 
 const Problem = () => {
