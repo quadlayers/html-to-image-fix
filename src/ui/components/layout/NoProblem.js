@@ -1,4 +1,4 @@
-import * as htmlToImage from 'html-to-image';
+import Buttons from './Buttons';
 
 const NoProblem = () => {
 
@@ -10,27 +10,13 @@ const NoProblem = () => {
         </svg>
       </div>
 
-      <button onClick={() => {
-        let container = document.getElementById('no-problem');
-        let node = document.getElementById('my-node-2');
-        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        node.style.background = `#${randomColor}`
+      <Buttons
+        containerId={'no-problem'}
+        nodeId={'my-node-2'}
+        text={'svg to image'}
+      />
 
-        htmlToImage.toPng(node)
-          .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-            container.appendChild(img);
-          })
-          .catch(function (error) {
-            console.error('oops, something went wrong!', error);
-          });
-      }}>
-        svg to image
-      </button>
-
-      <div id="no-problem" className="container">
-      </div>
+      <div id="no-problem" className="container"/>
     </>
   )
 
