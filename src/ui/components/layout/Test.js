@@ -179,12 +179,12 @@ const Test = () => {
       var screenshotJpegBlob = await takeScreenshotJpegBlob()
 
       var reader = new FileReader();
-      reader.readAsDataURL(screenshotJpegBlob); 
+      reader.readAsDataURL(screenshotJpegBlob);
       var img = new Image();
-      reader.onloadend = function() {
-        var base64data = reader.result;   
-        img.src = base64data;             
-        console.log(base64data);
+      reader.onloadend = function () {
+        var base64data = reader.result;
+        img.src = base64data;
+        //console.log(base64data);
       }
 
 

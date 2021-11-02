@@ -3,7 +3,8 @@ import domtoimage from 'dom-to-image';
 import { saveAsPng/* , saveAsJpeg */ } from 'save-html-as-image';
 import nodeToDataURL from 'html-element-to-image';
 
-import Test from './Test';
+/* import Test from './Test'; */
+import PicoTest from './PicoTest';
 
 const Buttons = (props) => {
 
@@ -19,7 +20,7 @@ const Buttons = (props) => {
       'alignItems': 'center',
       'justifyContent': 'center'
     }}>
-      {/* <Test /> */}
+      <PicoTest />
       <button onClick={() => {
         let container = document.getElementById(containerId);
         let node = document.getElementById(nodeId);
