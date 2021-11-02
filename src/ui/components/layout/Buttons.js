@@ -3,6 +3,8 @@ import domtoimage from 'dom-to-image';
 import { saveAsPng/* , saveAsJpeg */ } from 'save-html-as-image';
 import nodeToDataURL from 'html-element-to-image';
 
+import Test from './Test';
+
 const Buttons = (props) => {
 
   const {
@@ -17,6 +19,7 @@ const Buttons = (props) => {
       'alignItems': 'center',
       'justifyContent': 'center'
     }}>
+      {/* <Test /> */}
       <button onClick={() => {
         let container = document.getElementById(containerId);
         let node = document.getElementById(nodeId);
@@ -51,12 +54,22 @@ const Buttons = (props) => {
         {text}(dom to image)
       </button>
       <button onClick={() => {
-        //let container = document.getElementById(containerId);
+        let container = document.getElementById(containerId);
         let node = document.getElementById(nodeId);
         let randomColor = Math.floor(Math.random() * 16777215).toString(16);
         node.style.background = `#${randomColor}`
 
-        saveAsPng(node);
+        htmlToImage.toPng(node)
+          .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            container.appendChild(img);
+          })
+          .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+          });
+
+        saveAsPng(node)
       }}>
         {text}(save-html-as-image to image)
       </button>
@@ -69,11 +82,11 @@ const Buttons = (props) => {
         nodeToDataURL({
           targetNode: node,
         })
-        .then((url) => {
-          var img = new Image();
-          img.src = url;
-          container.appendChild(img);
-        })
+          .then((url) => {
+            var img = new Image();
+            img.src = url;
+            container.appendChild(img);
+          })
       }}>
         {text}(html-element-to-image to image)
       </button>
