@@ -3,15 +3,15 @@ import domtoimage from 'dom-to-image';
 import { saveAsPng/* , saveAsJpeg */ } from 'save-html-as-image';
 import nodeToDataURL from 'html-element-to-image';
 
-/* import Test from './Test'; */
-import PicoTest from './PicoTest';
+/* import GetDisplayMedia from './GetDisplayMedia'; */
+import Pico from './Pico';
+import IframeToHtmlToCanva from './IframeToHtmlToCanva';
 
 const Buttons = (props) => {
 
   const {
     containerId = 'problem',
-    nodeId = 'my-node',
-    text = 'background mask to image'
+    nodeId = 'my-node'
   } = props
 
   return (
@@ -20,7 +20,8 @@ const Buttons = (props) => {
       'alignItems': 'center',
       'justifyContent': 'center'
     }}>
-      <PicoTest />
+      <Pico />
+      <IframeToHtmlToCanva />
       <button onClick={() => {
         let container = document.getElementById(containerId);
         let node = document.getElementById(nodeId);
@@ -37,7 +38,7 @@ const Buttons = (props) => {
             console.error('oops, something went wrong!', error);
           });
       }}>
-        {text}(html to image)
+        html to image
       </button>
       <button onClick={() => {
         let container = document.getElementById(containerId);
@@ -52,7 +53,7 @@ const Buttons = (props) => {
             container.appendChild(img);
           })
       }}>
-        {text}(dom to image)
+        dom to image
       </button>
       <button onClick={() => {
         let container = document.getElementById(containerId);
@@ -72,7 +73,7 @@ const Buttons = (props) => {
 
         saveAsPng(node)
       }}>
-        {text}(save-html-as-image to image)
+        save-html-as-image to image
       </button>
       <button onClick={() => {
         let container = document.getElementById(containerId);
@@ -89,7 +90,7 @@ const Buttons = (props) => {
             container.appendChild(img);
           })
       }}>
-        {text}(html-element-to-image to image)
+        html-element-to-image to image
       </button>
     </div >
   )

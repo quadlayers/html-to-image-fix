@@ -172,7 +172,7 @@ function blobToCanvas(blob, maxWidth, maxHeight) {
   })
 }
 
-const Test = () => {
+const GetDisplayMedia = () => {
   return (
     <button onClick={async () => {
       // take the screenshot
@@ -210,4 +210,4 @@ const Test = () => {
 
 }
 
-export default Test;
+export default GetDisplayMedia;

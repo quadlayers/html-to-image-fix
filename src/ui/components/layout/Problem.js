@@ -4,6 +4,7 @@ const Problem = () => {
 
   return (
     <>
+      <h2>Problem</h2>
       <div id="my-node">
         <div id="my-node-mask" />
       </div>

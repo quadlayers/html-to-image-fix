@@ -1,6 +1,6 @@
 import * as pico from "@gripeless/pico";
 
-const PicoTest = () => {
+const Pico = () => {
   return (
     <button onClick={async () => {
       
@@ -15,4 +15,4 @@ const PicoTest = () => {
 
 }
 
-export default PicoTest;
+export default Pico;

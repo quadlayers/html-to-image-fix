@@ -10,6 +10,7 @@
     "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.5",
     "html-element-to-image": "^2.1.1",
+    "html-screen-capture-js": "^2.0.0",
     "html-to-image": "^1.9.0",
     "material-components-web": "^13.0.0",
     "react": "^17.0.2",
