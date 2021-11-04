@@ -12,6 +12,7 @@
     "html-element-to-image": "^2.1.1",
     "html-screen-capture-js": "^2.0.0",
     "html-to-image": "^1.9.0",
+    "iframe2image": "^0.2.1",
     "material-components-web": "^13.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

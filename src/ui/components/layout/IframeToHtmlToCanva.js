@@ -1,4 +1,4 @@
-import {capture, OutputType} from 'html-screen-capture-js';
+import { capture, OutputType } from 'html-screen-capture-js';
 
 const Pico = () => {
   return (

@@ -4,7 +4,7 @@ const Pico = () => {
   return (
     <button onClick={async () => {
       
-      let container = document.getElementById('inlineFrameExample');
+      // let container = document.getElementById('inlineFrameExample');
       const res = await pico.dataURL(window);
       console.log(res);
 

@@ -6,6 +6,7 @@ import nodeToDataURL from 'html-element-to-image';
 /* import GetDisplayMedia from './GetDisplayMedia'; */
 import Pico from './Pico';
 import IframeToHtmlToCanva from './IframeToHtmlToCanva';
+/* import IframeToImage from './IframeToImage'; */
 
 const Buttons = (props) => {
 
@@ -22,6 +23,10 @@ const Buttons = (props) => {
     }}>
       <Pico />
       <IframeToHtmlToCanva />
+      {/* <IframeToImage
+        containerId={containerId}
+        nodeId={nodeId}
+      /> */}
       <button onClick={() => {
         let container = document.getElementById(containerId);
         let node = document.getElementById(nodeId);
